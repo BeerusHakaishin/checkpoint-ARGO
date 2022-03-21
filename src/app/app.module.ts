@@ -13,6 +13,8 @@ import { AuthModule } from './auth/auth.module';
 import { IdentityComponent } from './identity/identity.component';
 import { RoyaumeComponent } from './royaume/royaume.component';
 import { ContactComponent } from './contact/contact.component';
+import { AdminModule } from './admin/admin.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,16 @@ import { ContactComponent } from './contact/contact.component';
     ButtonToTopComponent,
     IdentityComponent,
     RoyaumeComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuthModule,
+    AdminModule,
     ScrollingModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
