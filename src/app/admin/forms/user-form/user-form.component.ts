@@ -6,7 +6,10 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./user-form.component.scss']
 })
 export class UserFormComponent implements OnInit {
-
+  customAlertOptions: any = {
+    translucent: true
+  };
+  
   constructor(private modalCtrl: ModalController) { }
 
   ngOnInit(): void {

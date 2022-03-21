@@ -1,10 +1,27 @@
-<ion-header>
+<ion-header class="ion-padding">
 	<ion-toolbar>
         <ion-card-subtitle class="ion-text-center ion-text-uppercase">Formulaire</ion-card-subtitle>
     <ion-buttons fill="outline" slot="end">
 			<ion-button slot="icon-only" (click)="dismiss()">
 				<ion-icon name="close-outline"></ion-icon>
 			</ion-button>
-		</ion-buttons>
+	</ion-buttons>
 	</ion-toolbar>
+	<div class="ion-padding ion-text-center ion-text-wrap">
+		<form>
+			<ion-item lines="full">
+			  <ion-label position="floating">Valeur</ion-label>
+			  <ion-input type="text" required></ion-input>
+			</ion-item>
+		
+			<ion-item class="ion-padding-top">
+			  <ion-label position="floating">Description</ion-label>
+			  <ion-textarea required clearOnEdit="true" autocorrect="true" maxlength="250"></ion-textarea>
+			</ion-item>
+	
+			  <ion-col class="ion-padding">
+				<ion-button type="submit" color="primary" expand="block">Créer|Modifier</ion-button>
+			  </ion-col>
+		</form>
+	</div>
 </ion-header>
