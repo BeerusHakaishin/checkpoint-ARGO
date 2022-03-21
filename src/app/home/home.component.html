@@ -1,0 +1,220 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" class="ion-padding">
+      <ion-card>
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide>
+            <h1>Bienvenue</h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Des projets variés</h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Started from the bottom</h1>
+          </ion-slide>
+        </ion-slides>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<!-- END OF "PLEIN LA VUE" SLIDER -->
+
+<!-- WHO/WHERE/WHY CARD SECTION  -->
+<ion-card class="ion-text-center">
+    <ion-thumbnail>
+      <ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img>
+    </ion-thumbnail>
+  
+    <ion-card-header>
+      <ion-card-title>Qui sommes-nous ?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text class="ion-text-wrap">
+      Passionné de sports dès le plus jeune âge, j'ai pu aux travers de différentes 
+      disciplines m'épanouir et éprouver ma persévérance dans des contextes de compétitions de haut niveau;
+      <br>
+      Ma passion m'as conduit , par nature , à transmettre mon savoir et de me dévouer aux progrès des autres
+      au travers du métier de Préparateur Physique ainsi que dans le rôle de jury
+      <br>
+      d'examen final de diplômes relatifs au domaine de l'enseignement sportif.
+      <br>
+      Entouré de contacts dans le domaine de l'informatique , 
+      ceux-ci m'ont permis de découvrir le développement web, qui par la suite est devenu mon centre d'intérêt principal.
+      </ion-text>
+    </ion-card-content>
+</ion-card>
+
+<!-- VALEUR SECTION IRA SE LOGER DANS LE COMPONENT IDENTITY  -->
+<ion-card>
+  <ion-card-header><ion-icon name="bar-chart-outline"></ion-icon> Nos valeurs</ion-card-header>
+  <ion-card-content>
+    <!-- START ACCORDION -->
+<ion-accordion-group value="framework">
+  <!-- FRAMEWORK ACCORDION -->
+  <ion-accordion value="framework">
+    <ion-item slot="header" color="primary">
+      <ion-label><ion-icon name="library-outline"></ion-icon> Framework</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+
+      <ion-item>
+        <ion-label><ion-icon name="logo-angular"></ion-icon> Angular</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">70</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="leaf-outline"></ion-icon> Spring</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">60</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="logo-ionic"></ion-icon> Ionic</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">50</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+   <!-- LANGUAGES ACCORDION -->
+  <ion-accordion value="languages">
+    <ion-item slot="header" color="primary">
+      <ion-label><ion-icon name="language-outline"></ion-icon> Langages</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+       <ion-item>
+        <ion-label><ion-icon name="logo-javascript"></ion-icon> Javascript</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">65</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="cafe-outline"></ion-icon> Java</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">60</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+<!-- BDD ACCORDION -->
+  <ion-accordion value="bdd">
+    <ion-item slot="header" color="primary">
+      <ion-label><ion-icon name="file-tray-stacked-outline"></ion-icon> BDD</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+      <ion-item>
+        <ion-label><ion-icon name="server-outline"></ion-icon> SQL</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">65</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="server-outline"></ion-icon> Postgre</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">50</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+
+  <ion-accordion value="tools">
+    <ion-item slot="header" color="primary">
+      <ion-label><ion-icon name="construct-outline"></ion-icon> Outils</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+      <ion-item>
+        <ion-label><ion-icon name="terminal-outline"></ion-icon> VsCode</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">80</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="git-pull-request-outline"></ion-icon> Git</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">80</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="terminal-outline"></ion-icon> Eclipse</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">70</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label><ion-icon name="settings-outline"></ion-icon> SQL Workbench</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">70</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="settings-outline"></ion-icon> PG Admin</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-note color="primary" slot="start">50</ion-note>
+            <ion-text>%</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+</ion-accordion-group>
+  </ion-card-content>
+</ion-card>
+
+<!-- PROJECTS SECTION -->
+
+
+
+  
+  
+  
+
+
+
+  
+  
+  
+
+

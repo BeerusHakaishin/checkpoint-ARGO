@@ -1,0 +1,54 @@
+< <!-- SIDENAVBAR TOGGLE VUE -->
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+    <ion-toolbar translucent color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="['/home']">
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="['/identity']">
+        <ion-icon name="finger-print-outline" slot="start" ></ion-icon>
+        <ion-label>Identité</ion-label>
+      </ion-item>
+      <!-- IRA SE LOGER AINSI QUE SON CONTENU DANS IDENTITE
+        <ion-item>
+        <ion-icon name="podium-outline" slot="start"></ion-icon>
+        <ion-label>Nos valeurs</ion-label>
+      </ion-item> -->
+      <ion-item [routerLink]="['/royaume']">
+        <ion-icon name="earth-outline" slot="start"></ion-icon>
+        <ion-label>Royaume</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="['/contact']">
+        <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
+        <ion-label>Contact</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="['/login']">
+        <ion-icon name="log-in" slot="start" ></ion-icon>
+        <ion-label>Connexion</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- END OF SIDENAVBAR TOGGLE VUE -->
+<div class="ion-page" id="main-content">
+<!-- SIDENAVBAR EXPANDED VUE (DESKTOP) -->
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-text class="ion-text-wrap"> Argo <ion-icon name="boat-outline"></ion-icon></ion-text>
+        <ion-label slot="end" class="ion-text-wrap">
+          <ion-icon slot="end" name="moon"></ion-icon> Dark Theme
+        </ion-label>
+        <ion-toggle id="themeToggle" color="light" slot="end" (ionChange)="onClick($event)"></ion-toggle>
+      </ion-toolbar>
+    </ion-header>
+<!-- END OF SIDENAVBAR EXPANDED VUE (DESKTOP)-->
+</div>
