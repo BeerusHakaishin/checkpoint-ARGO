@@ -1,23 +1,44 @@
-<!-- FAMILY SECTION  -->
+<!-- HISTORY SECTION  -->
 <ion-card>
-    <ion-card-header class="ion-text-uppercase"><ion-icon name="pulse-outline"></ion-icon> Notre Histoire</ion-card-header>
+    <ion-card-header class="ion-text-uppercase"><ion-icon name="pulse-outline"></ion-icon> Chronologie</ion-card-header>
     <ion-card-content>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Beatae sed nobis expedita quos quae error temporibus enim, ex ducimus facere a perferendis,
-         suscipit eum vero! Quidem nemo quod reprehenderit placeat.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Beatae sed nobis expedita quos quae error temporibus enim, ex ducimus facere a perferendis,
-         suscipit eum vero! Quidem nemo quod reprehenderit placeat.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Beatae sed nobis expedita quos quae error temporibus enim, ex ducimus facere a perferendis,
-         suscipit eum vero! Quidem nemo quod reprehenderit placeat.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Beatae sed nobis expedita quos quae error temporibus enim, ex ducimus facere a perferendis,
-         suscipit eum vero! Quidem nemo quod reprehenderit placeat.
+      <!-- Item Dividers in a List -->
+      <ion-list>
+        <ion-item-divider color="primary">
+          <ion-label>
+            Pré Formation
+          </ion-label>
+        </ion-item-divider>
+        <ion-item>
+          <ion-text class="ion-text-center ion-text-wrap">
+            Serverux et Pollux concevaient notre premier site en vanilla JavaScript 
+            , à cette époque nous étions férus de vins et de sandales !
+          </ion-text>
+          <ion-button slot="end" 
+                      href="https://beerushakaishin.github.io/WCS_challenge/index.html#"
+                      target="blank">
+            <ion-icon slot="icon-only" name="star-half"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-item-divider color="secondary">
+          <ion-label>
+            Post Formation
+          </ion-label>
+        </ion-item-divider>
+        <ion-item>
+          <ion-text class="ion-text-center ion-text-wrap">
+            Aujourd'hui nous sommes passés à la bière et nos 2 héros , chaussant fièrement des crocs, ont acquis la sagesse des frameworks et vous présentent ce nouveau site !
+          </ion-text>
+          <ion-button slot="end" [routerLink]="['/home']">
+            <ion-icon slot="icon-only" name="star"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
     </ion-card-content>
 </ion-card>
 
-<!-- VALEUR ACOORDION SECTION  -->
+<!-- VALEUR ACCORDION SECTION  -->
 <ion-card>
     <ion-card-header class="ion-text-uppercase"><ion-icon name="sparkles-outline"></ion-icon> Nos valeurs</ion-card-header>
     <ion-card-content>
