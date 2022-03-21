@@ -12,6 +12,4 @@ export class IdentityComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-
 }
