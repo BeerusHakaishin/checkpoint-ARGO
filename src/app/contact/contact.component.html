@@ -1,65 +1,48 @@
-
-<ion-card class="ion-padding">
+<div class="ion-padding">
+  <ion-card class="ion-padding">
+    <ion-card-header color="primary">
+      <ion-card-title class="ion-text-center ion-text-wrap ion-text-uppercase">
+        <ion-icon name="play-outline"></ion-icon> Passez au Papyrus Numérique
+      </ion-card-title>
+    </ion-card-header>
     <form>
         <ion-item lines="full">
-          <ion-label position="floating">Name</ion-label>
+          <ion-label position="floating"><ion-icon name="person-outline"></ion-icon> Nom/Prénom</ion-label>
           <ion-input type="text" required></ion-input>
         </ion-item>
     
         <ion-item lines="full">
-          <ion-label position="floating">Email</ion-label>
+          <ion-label position="floating"><ion-icon name="mail-outline"></ion-icon> Email</ion-label>
           <ion-input type="email" required></ion-input>
         </ion-item>
     
+
         <ion-item lines="full">
-          <ion-label position="floating">DOB</ion-label>
-          <ion-input type="text" required></ion-input>
-        </ion-item>
-    
-        <ion-item lines="full">
-          <ion-label position="floating">Mobile</ion-label>
-          <ion-input type="text" required></ion-input>
+          <ion-label position="floating"><ion-icon name="phone-portrait-outline"></ion-icon> Mobile</ion-label>
+          <ion-input type="tel" required></ion-input>
         </ion-item>
     
         
         <ion-radio-group lines="full">
           <ion-list-header>
-            <ion-label>Gender</ion-label>
+            <ion-label>Objet</ion-label>
           </ion-list-header>
     
           <ion-item>
-            <ion-label>Male</ion-label>
+            <ion-label>Question</ion-label>
             <ion-radio slot="start" value="male" checked></ion-radio>
           </ion-item>
     
           <ion-item>
-            <ion-label>Female</ion-label>
+            <ion-label>Business</ion-label>
             <ion-radio slot="start" value="female"></ion-radio>
           </ion-item>
         </ion-radio-group>
-    
-        
-        <ion-list lines="full">
-          <ion-list-header>
-            <ion-label>Subjects</ion-label>
-          </ion-list-header>
-          <ion-item>
-            <ion-label>English</ion-label>
-            <ion-checkbox></ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-label>Maths</ion-label>
-            <ion-checkbox></ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-label>Science</ion-label>
-            <ion-checkbox></ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-label>History</ion-label>
-            <ion-checkbox></ion-checkbox>
-          </ion-item>
-        </ion-list>
+
+        <ion-item class="ion-padding-top">
+          <ion-label position="floating"><ion-icon name="newspaper-outline"></ion-icon> Message</ion-label>
+          <ion-textarea required clearOnEdit="true" autocorrect="true" maxlength="250"></ion-textarea>
+        </ion-item>
     
         <ion-row>
           <ion-col>
@@ -68,5 +51,11 @@
         </ion-row>
       </form>
 </ion-card>
+</div>
+
+
+
+
+
 
 

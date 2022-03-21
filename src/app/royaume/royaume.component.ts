@@ -12,4 +12,17 @@ export class RoyaumeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  items = [
+    'bandit',
+    'batmobile',
+    'blues-brothers',
+    'bueller',
+    'delorean',
+    'eleanor',
+    'general-lee',
+    'ghostbusters',
+    'knight-rider',
+    'mirth-mobile'
+  ];
+
 }
