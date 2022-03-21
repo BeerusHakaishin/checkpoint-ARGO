@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { RoyaumeFormComponent } from '../forms/royaume-form/royaume-form.component';
 
 @Component({
   selector: 'app-royaume-crud',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoyaumeCrudComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
 
   ngOnInit(): void {
   }
 
+  async openModal() {
+    const modal = await this.modalCtrl.create({
+      component: RoyaumeFormComponent
+    });
+    return await modal.present();
+  }
 }

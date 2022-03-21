@@ -44,7 +44,7 @@
                     </ion-text>
                 </td>
                 <td class="col-5 col-md-2 ion-text-center ion-text-wrap">
-                  <ion-button color="warning">
+                  <ion-button color="warning" (click)="openModal()">
                       <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
                     </ion-button>
                     <ion-button color="danger">
@@ -54,7 +54,7 @@
               </tr>
               <tr>
                 <td class="text-center" colspan="6" style="text-align: center">
-                  <ion-button color="success">
+                  <ion-button color="success" (click)="openModal()">
                       <ion-icon slot="icon-only" name="create-outline"></ion-icon>
                     </ion-button>
                 </td>

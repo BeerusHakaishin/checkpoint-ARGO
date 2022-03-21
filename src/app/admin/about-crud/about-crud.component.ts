@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { AboutFormComponent } from '../forms/about-form/about-form.component';
 
 @Component({
   selector: 'app-about-crud',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutCrudComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
 
   ngOnInit(): void {
+  }
+
+  async openModal() {
+    const modal = await this.modalCtrl.create({
+      component: AboutFormComponent
+    });
+    return await modal.present();
   }
 
 }
