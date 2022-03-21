@@ -1,6 +1,6 @@
 <section>
     <!-- TABLEAU EQUIPE CRUD -->
-    <ion-card-subtitle class="ion-padding ion-text-wrap ion-text-uppercase">Equipage Gestion</ion-card-subtitle>
+    <ion-card-subtitle class="ion-padding ion-text-wrap ion-text-uppercase">Utilisateurs Gestion</ion-card-subtitle>
     <div
       class="card shadow mb-4"
       style="color: var(--bs-gray-900); height: auto; padding-bottom: 20px; margin-top: 0px"
@@ -12,10 +12,8 @@
             <thead>
               <tr>
                 <th class="ion-text-center ion-text-wrap">#</th>
-                <th class="ion-text-center ion-text-wrap">Photo</th>
                 <th class="ion-text-center ion-text-wrap">Nom</th>
-                <th class="ion-text-center ion-text-wrap">D.O.B</th>
-                <th class="ion-text-center ion-text-wrap">Description</th>
+                <th class="ion-text-center ion-text-wrap">Rôle</th>
                 <th class="ion-text-center ion-text-wrap">Action</th>
               </tr>
             </thead>
@@ -24,23 +22,13 @@
               <tr>
                 <td class="col-1 ion-text-center ion-text-wrap">{{ "valeur.id" }}</td>
                 <td class="col-3 col-md-2 ion-text-center ion-text-wrap">
-                    <ion-text class="ion-text-center ion-text-wrap">
-                        {{ "valeur.photo" }}
-                      </ion-text>
-                  </td>
-                <td class="col-3 col-md-2 ion-text-center ion-text-wrap">
                   <ion-text class="ion-text-center ion-text-wrap">
                       {{ "valeur.nom" }}
                     </ion-text>
                 </td>
-                <td class="col-3 col-md-2 ion-text-center ion-text-wrap">
-                    <ion-text class="ion-text-center ion-text-wrap">
-                        {{ "valeur.dob" }}
-                      </ion-text>
-                  </td>
                 <td class="col-2 ion-text-center ion-text-wrap">
                     <ion-text class="ion-text-center ion-text-wrap">
-                      {{ "valeur.description" }}
+                      {{ "valeur.role" }}
                     </ion-text>
                 </td>
                 <td class="col-5 col-md-2 ion-text-center ion-text-wrap">
@@ -53,7 +41,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="text-center" colspan="6" style="text-align: center">
+                <td class="text-center" colspan="4" style="text-align: center">
                   <ion-button color="success">
                       <ion-icon slot="icon-only" name="create-outline"></ion-icon>
                     </ion-button>
@@ -95,7 +83,7 @@
           margin-bottom: -21px;
         "
       >
-        <span class="text-center d-flex flex-row justify-content-end">5 Argonautes / page</span>
+        <span class="text-center d-flex flex-row justify-content-end">5 Utilisateurs / page</span>
       </div>
     </div>
   </section>

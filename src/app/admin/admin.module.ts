@@ -5,13 +5,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeCrudComponent } from './home-crud/home-crud.component';
 import { AboutCrudComponent } from './about-crud/about-crud.component';
 import { RoyaumeCrudComponent } from './royaume-crud/royaume-crud.component';
+import { UserCrudComponent } from './user-crud/user-crud.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     HomeCrudComponent,
     AboutCrudComponent,
-    RoyaumeCrudComponent
+    RoyaumeCrudComponent,
+    UserCrudComponent
   ],
   imports: [
     CommonModule,
