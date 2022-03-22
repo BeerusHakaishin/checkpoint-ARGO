@@ -1,12 +1,14 @@
 export class User {
     private _id: number;
     private _username: string;
+    private _role: string;
     private _accessToken: string;
   
-    constructor(id: number, username: string, accessToken: string) {
+    constructor(id: number, username: string, accessToken: string, role: string) {
       this._id = id;
       this._username = username;
       this._accessToken = accessToken;
+      this._role = role;
     }
   
     /**
@@ -55,5 +57,12 @@ export class User {
      */
     public set accessToken(value: string) {
       this._accessToken = value;
+    }
+
+    public get role(): string {
+      return this._role;
+    }
+    public set role(value: string) {
+      this._role = value;
     }
   }
