@@ -13,6 +13,8 @@ import { RoyaumeComponent } from './royaume/royaume.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdminModule } from './admin/admin.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     AuthModule,
     AdminModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     ScrollingModule,
     IonicModule.forRoot(),
     BrowserAnimationsModule

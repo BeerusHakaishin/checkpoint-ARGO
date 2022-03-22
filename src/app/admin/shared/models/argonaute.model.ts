@@ -1,19 +1,19 @@
 export class Argonaute {
-  private _description: string;
-  private _name: string;
+  private _surname: string;
   private _id: number;
+  private _description: string;
   private _dob: Date;
   
   constructor(
     description: string,
-    name: string,
+    surname: string,
     id: number,
     dob: Date,
   ) {
     this._description = description;
     this._id = id;
     this._dob = dob;
-    this._name = name;
+    this._surname = surname;
   }
 
   /**
@@ -52,16 +52,16 @@ export class Argonaute {
    * Getter name
    * @return {string}
    */
-  public get name(): string {
-    return this._name;
+  public get surname(): string {
+    return this._surname;
   }
 
   /**
    * Setter lastname
    * @param {string} value
    */
-  public set name(value: string) {
-    this._name = value;
+  public set surname(value: string) {
+    this._surname = value;
   }
 
    /**
