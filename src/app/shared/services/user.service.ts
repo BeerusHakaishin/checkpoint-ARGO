@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Admin } from 'src/app/admin/shared/models/admin.model';
 import { environment } from 'src/environments/environment';
@@ -23,8 +24,8 @@ export class UserService {
     return this.http.delete<any>(environment.apiUrl + 'users-admin/' + id);
   }
 
-  public postUser(user: Admin): Observable<Admin> {
-    return this.http.post<Admin>(environment.apiUrl + 'auth/signup', user);
+  public postUser(formData: FormGroup): Observable<Admin> {
+    return this.http.post<Admin>(environment.apiUrl + 'auth/signup', formData);
   }
 
   public updateAdmin(data: string, id: number): Observable<Admin> {
