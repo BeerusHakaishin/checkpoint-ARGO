@@ -2,13 +2,14 @@ import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {Observable, Subject} from 'rxjs';
+import { User } from 'src/app/admin/shared/models/user.model';
 import {environment} from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  user: any;
+  user!: User;
   emitChangeSource = new Subject<any>();
   changeEmitted$ = this.emitChangeSource.asObservable();
 
@@ -18,7 +19,7 @@ export class AuthService {
     return this.http.post(environment.apiUrl + 'auth/signin', formData);
   }
 
-  public storeUser(user: any) {
+  public storeUser(user: User) {
     localStorage.setItem('user', JSON.stringify(user));
   }
 
@@ -27,7 +28,13 @@ export class AuthService {
     if (user != null) {
       this.user = JSON.parse(user);
       return this.user.accessToken;
+    } else {
+      return null;
     }
+  }
+
+  public isLoggedIn() {
+    return localStorage.getItem('user') != null;
   }
 
   public getUserId() {
@@ -35,19 +42,9 @@ export class AuthService {
     if (user != null) {
       this.user = JSON.parse(user);
       return this.user.id;
+    } else {
+      return null;
     }
-  }
-
-  public isAdmin() {
-    const user = localStorage.getItem('user');
-    if (user != null) {
-      this.user = JSON.parse(user);
-      return this.user.roles.includes('ROLE_ADMIN');
-    }
-  }
-
-  public isLoggedIn() {
-    return localStorage.getItem('user') != null;
   }
 
   public logOut(): Observable<any> {
@@ -62,15 +59,13 @@ export class AuthService {
     this.emitChangeSource.next(change);
   }
 
-  public isTokenExpired(): Observable<any> {
-    return this.http.get<any>(environment.apiUrl + 'auth/istokenexpired');
-  }
-
   public getUsername() {
     const user = localStorage.getItem('user');
     if (user != null) {
       this.user = JSON.parse(user);
       return this.user.username;
+    } else {
+      return null;
     }
   }
 }
