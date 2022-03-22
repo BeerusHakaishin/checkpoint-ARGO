@@ -12,7 +12,6 @@
             <thead>
               <tr>
                 <th class="ion-text-center ion-text-wrap">#</th>
-                <th class="ion-text-center ion-text-wrap">Photo</th>
                 <th class="ion-text-center ion-text-wrap">Nom</th>
                 <th class="ion-text-center ion-text-wrap">D.O.B</th>
                 <th class="ion-text-center ion-text-wrap">Description</th>
@@ -23,11 +22,6 @@
             <tbody>
               <tr>
                 <td class="col-1 ion-text-center ion-text-wrap">{{ "valeur.id" }}</td>
-                <td class="col-3 col-md-2 ion-text-center ion-text-wrap">
-                    <ion-text class="ion-text-center ion-text-wrap">
-                        {{ "valeur.photo" }}
-                      </ion-text>
-                  </td>
                 <td class="col-3 col-md-2 ion-text-center ion-text-wrap">
                   <ion-text class="ion-text-center ion-text-wrap">
                       {{ "valeur.nom" }}
@@ -53,7 +47,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="text-center" colspan="6" style="text-align: center">
+                <td class="text-center" colspan="5" style="text-align: center">
                   <ion-button color="success" (click)="openModal()">
                       <ion-icon slot="icon-only" name="create-outline"></ion-icon>
                     </ion-button>

@@ -1,6 +1,9 @@
 <ion-header class="ion-padding">
 	<ion-toolbar>
         <ion-card-subtitle class="ion-text-center ion-text-uppercase">Formulaire</ion-card-subtitle>
+		<div class="container">
+			<p>Value: {{ equipageForm.value | json }}</p>
+		  </div>
     <ion-buttons fill="outline" slot="end">
 			<ion-button slot="icon-only" (click)="dismiss()">
 				<ion-icon name="close-outline"></ion-icon>
@@ -8,25 +11,22 @@
 	</ion-buttons>
 	</ion-toolbar>
 	<div class="ion-padding ion-text-center ion-text-wrap">
-		<form>
-			<ion-item lines="full">
-			  <ion-label position="stacked">Photo</ion-label>
-			  <ion-input type="file" required></ion-input>
-			</ion-item>
-
+		<form (ngSubmit)="equipageForm.valid && submitForm()"
+		[formGroup]="equipageForm"
+		#equipeForm="ngForm">
 			<ion-item lines="full">
 				<ion-label position="floating">Nom</ion-label>
-				<ion-input type="text" required></ion-input>
+				<ion-input formControlName="name" type="text" required></ion-input>
 			</ion-item>
 
 			<ion-item lines="full">
 				<ion-label position="stacked">Naissance</ion-label>
-				<ion-input type="date" required></ion-input>
+				<ion-input formControlName="dob" type="date" required></ion-input>
 			</ion-item>
 		
 			<ion-item class="ion-padding-top">
 			  <ion-label position="floating">Description</ion-label>
-			  <ion-textarea required clearOnEdit="true" autocorrect="true" maxlength="250"></ion-textarea>
+			  <ion-textarea formControlName="description" required clearOnEdit="true" autocorrect="true" maxlength="250"></ion-textarea>
 			</ion-item>
 	
 			  <ion-col class="ion-padding">
@@ -35,3 +35,4 @@
 		</form>
 	</div>
 </ion-header>
+  

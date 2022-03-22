@@ -1,6 +1,9 @@
 <ion-header class="ion-padding">
 	<ion-toolbar>
         <ion-card-subtitle class="ion-text-center ion-text-uppercase">Formulaire</ion-card-subtitle>
+		<div class="container">
+			<p>Value: {{ adminForm.value | json }}</p>
+		  </div>
     <ion-buttons fill="outline" slot="end">
 			<ion-button slot="icon-only" (click)="dismiss()">
 				<ion-icon name="close-outline"></ion-icon>
@@ -8,25 +11,22 @@
 	</ion-buttons>
 	</ion-toolbar>
 	<div class="ion-padding ion-text-center ion-text-wrap">
-		<form>
+		<form (ngSubmit)="adminForm.valid && submitForm()"
+		[formGroup]="adminForm"
+		#userForm="ngForm">
 			<ion-item lines="full">
 				<ion-label position="floating">Nom</ion-label>
-				<ion-input type="text" required></ion-input>
+				<ion-input formControlName="name" type="text" required></ion-input>
 			</ion-item>
 
 			<ion-item lines="full">
 					  <ion-label position="floating">Rôle</ion-label>
-					  <ion-select [interfaceOptions]="customAlertOptions" interface="alert" multiple="false" placeholder="Admin">
+					  <ion-select  formControlName="role" [interfaceOptions]="customAlertOptions" interface="alert" multiple="false" placeholder="Admin">
 						<ion-select-option value="admin">Admin</ion-select-option>
 						<ion-select-option value="guest">Invité</ion-select-option>
 					  </ion-select>
 			</ion-item>
-		
-			<ion-item >
-			  <ion-label position="floating">Description</ion-label>
-			  <ion-textarea required clearOnEdit="true" autocorrect="true" maxlength="250"></ion-textarea>
-			</ion-item>
-	
+
 			  <ion-col class="ion-padding">
 				<ion-button type="submit" color="primary" expand="block">Créer|Modifier</ion-button>
 			  </ion-col>
