@@ -14,7 +14,7 @@ export class RoyaumeFormComponent implements OnInit {
   argonaute : Argonaute | any;
 
   public equipageForm: FormGroup = this.fb.group({
-    name: ['', [Validators.required, Validators.maxLength(255), Validators.minLength(2)]],
+    surname: ['', [Validators.required, Validators.maxLength(255), Validators.minLength(2)]],
     description: ['', [Validators.required, Validators.minLength(2)]],
     dob: ['', [Validators.required]],
   });
