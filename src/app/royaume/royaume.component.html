@@ -8,73 +8,16 @@
     <ion-row class="ion-justify-content-center">
       <!-- CARD BEGIN -->
       <ion-col size="12" size-sm="3">
-        <ion-card>
+        <ion-card *ngFor="let argonaute of argonautes">
           <ion-card-content>
             <ion-item lines="none">
               <ion-thumbnail slot="start">
                 <ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img>
               </ion-thumbnail>
-              <ion-label>Serverux</ion-label>
-              <ion-card-subtitle>12/09/1029</ion-card-subtitle>
+              <ion-label>{{argonaute.surname}}</ion-label>
+              <ion-card-subtitle>{{argonaute.dob}}</ion-card-subtitle>
             </ion-item>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Beatae sed nobis expedita quos quae error temporibus enim, ex ducimus facere a perferendis,
-               suscipit eum vero! Quidem nemo quod reprehenderit placeat.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </ion-card-content>
-      </ion-card>
-      </ion-col>
-      <!-- CARD BEGIN -->
-      <ion-col size="12" size-sm="3">
-        <ion-card>
-          <ion-card-content>
-            <ion-item lines="none">
-              <ion-thumbnail slot="start">
-                <ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img>
-              </ion-thumbnail>
-              <ion-label>Pollux</ion-label>
-              <ion-card-subtitle>12/09/1029</ion-card-subtitle>
-            </ion-item>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Beatae sed nobis expedita quos quae error temporibus enim, ex ducimus facere a perferendis,
-               suscipit eum vero! Quidem nemo quod reprehenderit placeat.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </ion-card-content>
-      </ion-card>
-      </ion-col>
-      <!-- CARD BEGIN -->
-      <ion-col size="12" size-sm="3">
-        <ion-card>
-          <ion-card-content>
-            <ion-item lines="none">
-              <ion-thumbnail slot="start">
-                <ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img>
-              </ion-thumbnail>
-              <ion-label>Jason</ion-label>
-              <ion-card-subtitle>12/09/1029</ion-card-subtitle>
-            </ion-item>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Beatae sed nobis expedita quos quae error temporibus enim, ex ducimus facere a perferendis,
-               suscipit eum vero! Quidem nemo quod reprehenderit placeat.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </ion-card-content>
-      </ion-card>
-      </ion-col>
-      <!-- CARD BEGIN -->
-      <ion-col size="12" size-sm="3">
-        <ion-card>
-          <ion-card-content>
-            <ion-item lines="none">
-              <ion-thumbnail slot="start">
-                <ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img>
-              </ion-thumbnail>
-              <ion-label>Ismaëlux</ion-label>
-              <ion-card-subtitle>27/08/1993</ion-card-subtitle>
-            </ion-item>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Beatae sed nobis expedita quos quae error temporibus enim, ex ducimus facere a perferendis,
-               suscipit eum vero! Quidem nemo quod reprehenderit placeat.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            {{argonaute.description}}
           </ion-card-content>
       </ion-card>
       </ion-col>
