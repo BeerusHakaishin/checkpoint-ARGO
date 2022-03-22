@@ -8,7 +8,6 @@ import { IonicModule } from '@ionic/angular';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { ButtonToTopComponent } from './button-to-top/button-to-top.component';
 import { AuthModule } from './auth/auth.module';
 import { RoyaumeComponent } from './royaume/royaume.component';
 import { ContactComponent } from './contact/contact.component';
@@ -21,7 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    ButtonToTopComponent,
     RoyaumeComponent,
     ContactComponent,
   ],
