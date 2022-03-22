@@ -8,8 +8,6 @@ import { UserCrudComponent } from './user-crud/user-crud.component';
 import { RoyaumeFormComponent } from './forms/royaume-form/royaume-form.component';
 import { UserFormComponent } from './forms/user-form/user-form.component';
 import { RoyaumeCrudComponent } from './royaume-crud/royaume-crud.component';
-import { UserUpdateFormComponent } from './forms/user-update-form/user-update-form.component';
-import { RoyaumeUpdateFormComponent } from './forms/royaume-update-form/royaume-update-form.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +17,6 @@ import { RoyaumeUpdateFormComponent } from './forms/royaume-update-form/royaume-
     UserCrudComponent,
     RoyaumeFormComponent,
     UserFormComponent,
-    UserUpdateFormComponent,
-    RoyaumeUpdateFormComponent,
   ],
   imports: [
     CommonModule,
