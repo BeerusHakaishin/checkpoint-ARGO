@@ -27,7 +27,7 @@
 			</ion-item>
 	
 			  <ion-col class="ion-padding">
-				<ion-button (click)="submitForm()" type="submit" color="primary" expand="block">Créer</ion-button>
+				<ion-button (click)="submitForm()" type="submit" color="primary" expand="block">{{ argonaute != undefined ? 'Modifier' : 'Créer' }}</ion-button>
 			  </ion-col>
 		</form>
 	</div>

@@ -38,7 +38,7 @@
                     </ion-text>
                 </td>
                 <td class="col-5 col-md-2 ion-text-center ion-text-wrap">
-                  <ion-button color="warning" (click)="openModal()">
+                  <ion-button color="warning" (click)="openUpdateModal(argonaute.id)">
                       <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
                     </ion-button>
                     <ion-button (click)="deleteArgonaute(argonaute.id)" color="danger">
@@ -66,15 +66,6 @@
             margin-bottom: 5px;
           "
         >
-          <!-- PAGINATION CONTROLS  -->
-          <!-- <pagination-controls
-            id="config"
-            previousLabel="Precedente"
-            nextLabel="Suivante"
-            [responsive]="true"
-            (pageChange)="handlePageChange($event)"
-            (pageBoundsCorrection)="handlePageChange($event)"
-          ></pagination-controls> -->
         </div>
       </div>
       <div

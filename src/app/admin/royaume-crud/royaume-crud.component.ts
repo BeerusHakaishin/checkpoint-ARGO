@@ -11,6 +11,7 @@ import { Argonaute } from '../shared/models/argonaute.model';
 })
 export class RoyaumeCrudComponent implements OnInit {
   argonautes!: Argonaute[];
+  argonaute: Argonaute | undefined;
   
   constructor(private modalCtrl: ModalController, private royaumeService: RoyaumeService) {
     this.argonautes = [];
@@ -23,6 +24,14 @@ export class RoyaumeCrudComponent implements OnInit {
   async openModal() {
     const modal = await this.modalCtrl.create({
       component: RoyaumeFormComponent
+    });
+    return await modal.present();
+  }
+
+  async openUpdateModal(id: number) {
+    const modal = await this.modalCtrl.create({
+      component: RoyaumeFormComponent,
+      componentProps: { data: id }
     });
     return await modal.present();
   }
