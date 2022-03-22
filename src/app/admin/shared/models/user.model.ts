@@ -1,14 +1,16 @@
+import { Role } from "./role.model";
+
 export class User {
     private _id: number;
     private _username: string;
-    private _role: string;
+    private _roles: Role[];
     private _accessToken: string;
   
-    constructor(id: number, username: string, accessToken: string, role: string) {
+    constructor(id: number, username: string, accessToken: string, roles: Role[],) {
       this._id = id;
       this._username = username;
       this._accessToken = accessToken;
-      this._role = role;
+      this._roles = roles;
     }
   
     /**
@@ -59,10 +61,19 @@ export class User {
       this._accessToken = value;
     }
 
-    public get role(): string {
-      return this._role;
-    }
-    public set role(value: string) {
-      this._role = value;
-    }
+   /**
+   * Getter roles
+   * @return {Role[]}
+   */
+  public get roles(): Role[] {
+    return this._roles;
+  }
+
+  /**
+   * Setter roles
+   * @param {Role[]} value
+   */
+  public set roles(value: Role[]) {
+    this._roles = value;
+  }
   }

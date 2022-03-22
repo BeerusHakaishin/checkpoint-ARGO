@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { UserFormComponent } from '../forms/user-form/user-form.component';
+import { Role } from '../shared/models/role.model';
 import { User } from '../shared/models/user.model';
 import { UserService } from '../shared/services/user.service';
 
@@ -26,11 +27,15 @@ export class UserCrudComponent implements OnInit {
     return await modal.present();
   }
 
-  // getUsers(): void {
-  //   this.userService
-  //     .getUsers()
-  //     .subscribe((users: User[]) => (this.users = users));
-  // }
+  isAdminOrNo(allRoles: Role[]) {
+    const roles: string[] = [];
+    allRoles.forEach((role) => {
+      roles.push(role.name);
+    });
+    if (roles.includes('ROLE_ADMIN')) {
+      return 'Admin';
+    } else return 'User';
+  }
 
   getUsers() {
     this.userService.getUsers().subscribe({
