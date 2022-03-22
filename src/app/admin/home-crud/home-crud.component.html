@@ -17,14 +17,7 @@
             <tbody>
               <tr>
                 <td class="col-3 col-md-2 ion-text-center ion-text-wrap ion-padding">
-                    <ion-slides  class="ion-padding" [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
-                        <ion-slide *ngFor="let card of [0,1,2]" style="width: 150px; height: 80px; border: 2px solid #f8f8f8">
-                          <ion-col>
-                            <ion-label>{{ card }}</ion-label>
-                            <ion-img style="pointer-events:none" src="https://via.placeholder.com/150"></ion-img>
-                          </ion-col>
-                        </ion-slide>
-                      </ion-slides>
+                            <!-- <ion-img style="pointer-events:none" src="https://via.placeholder.com/50"></ion-img> -->
                 </td>
               </tr>
               <tr>
@@ -32,7 +25,6 @@
                   <ion-button color="primary">
                         <input
                         type="file"
-                        multiple="multiple"
                         id="backgroundCrud"
                         name="backgroundCrud"
                         accept="image/*"
