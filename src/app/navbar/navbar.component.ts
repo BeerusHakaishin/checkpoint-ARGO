@@ -46,7 +46,7 @@ export class NavbarComponent implements OnInit {
       next: () => {
         this.authService.removeUser();
         this.isLogged = false;
-        this.route.navigate(['/home']);
+        this.route.navigate(['/login']);
       },
     });
   }
