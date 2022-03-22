@@ -10,7 +10,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ButtonToTopComponent } from './button-to-top/button-to-top.component';
 import { AuthModule } from './auth/auth.module';
-import { IdentityComponent } from './identity/identity.component';
 import { RoyaumeComponent } from './royaume/royaume.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdminModule } from './admin/admin.module';
@@ -23,7 +22,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     HomeComponent,
     ButtonToTopComponent,
-    IdentityComponent,
     RoyaumeComponent,
     ContactComponent,
   ],

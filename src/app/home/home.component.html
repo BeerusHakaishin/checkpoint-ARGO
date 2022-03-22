@@ -38,6 +38,110 @@
 
 
 
+<!-- HISTORY SECTION  -->
+<ion-card>
+  <ion-card-header class="ion-text-uppercase"><ion-icon name="timer-outline"></ion-icon> Chronologie</ion-card-header>
+  <ion-card-content>
+    <!-- Item Dividers in a List -->
+    <ion-list>
+      <ion-item-divider color="primary">
+        <ion-label>
+          Pré Formation
+        </ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-text class="ion-text-center ion-text-wrap">
+          Serverux et Pollux concevaient notre premier site en vanilla JavaScript 
+          , à cette époque nous étions férus de vins et de sandales !
+        </ion-text>
+        <ion-button slot="end" 
+                    href="https://beerushakaishin.github.io/WCS_challenge/index.html#"
+                    target="blank">
+          <ion-icon slot="icon-only" name="star-half"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <ion-item-divider color="secondary">
+        <ion-label>
+          Post Formation
+        </ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-text class="ion-text-center ion-text-wrap">
+          Aujourd'hui nous sommes passés à la bière et nos 2 héros , chaussant fièrement des crocs, ont acquis la sagesse des frameworks et vous présentent ce nouveau site !
+        </ion-text>
+        <ion-button slot="end" [routerLink]="['/home']">
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+
+<!-- VALEUR ACCORDION SECTION  -->
+<ion-card>
+  <ion-card-header class="ion-text-uppercase"><ion-icon name="sparkles-outline"></ion-icon> Nos valeurs</ion-card-header>
+  <ion-card-content>
+    <!-- START ACCORDION -->
+<ion-accordion-group value="humor">
+  <!-- HUMOR ACCORDION -->
+  <ion-accordion value="humor">
+    <ion-item slot="header" color="primary">
+      <ion-label><ion-icon name="thumbs-up-outline"></ion-icon> Humour</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+      <ion-item lines="none">
+        <ion-list>
+          <ion-item lines="none" class="ion-text-wrap ion-text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Corrupti eos animi itaque aliquid expedita exercitationem minima fugiat nemo dolore sint.
+            Sunt odio tempore eveniet voluptate animi ratione ipsam nisi quos.
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+   <!-- HONNOR ACCORDION -->
+  <ion-accordion value="honnor">
+    <ion-item slot="header" color="primary">
+      <ion-label><ion-icon name="ribbon-outline"></ion-icon> Honneur</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+       <ion-item lines="none">
+        <ion-list>
+          <ion-item lines="none" class="ion-text-wrap ion-text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nesciunt perferendis saepe debitis autem amet incidunt hic quaerat voluptatum officiis 
+            enim reiciendis ducimus deleniti aspernatur, velit dignissimos accusamus.
+            Sed, similique laboriosam.
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+<!-- WINE ACCORDION -->
+  <ion-accordion value="beer">
+    <ion-item slot="header" color="primary">
+      <ion-label><ion-icon name="beer-outline"></ion-icon> Beerologie</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+      <ion-item lines="none">
+        <ion-list>
+          <ion-item lines="none" class="ion-text-wrap ion-text-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus totam voluptas tempore
+              rem quo quis animi autem nulla. Soluta, ut impedit quis ex iste similique! 
+              Quae voluptate ducimus porro? Exercitationem.
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+</ion-accordion-group>
+  </ion-card-content>
+</ion-card>
+
+
+
 
 
   
