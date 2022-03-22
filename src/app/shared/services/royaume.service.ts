@@ -13,22 +13,22 @@ export class RoyaumeService {
   constructor(private http: HttpClient) { }
 
   public getArgonautes(): Observable<Argonaute[]> {
-    return this.http.get<Argonaute[]>(environment.apiUrl + 'royaume');
+    return this.http.get<Argonaute[]>(environment.apiUrl + 'argonautes');
   }
 
   public getOneArgonaute(id: number): Observable<Argonaute> {
-    return this.http.get<Argonaute>(environment.apiUrl + 'royaume/' + id);
+    return this.http.get<Argonaute>(environment.apiUrl + 'argonautes/' + id);
   }
 
   public deleteArgonaute(id: number): Observable<any> {
-    return this.http.delete<any>(environment.apiUrl + 'royaume/' + id);
+    return this.http.delete<any>(environment.apiUrl + 'argonautes/' + id);
   }
 
   public postArgonaute(formData: FormGroup): Observable<Argonaute> {
-    return this.http.post<Argonaute>(environment.apiUrl + 'royaume/', formData);
+    return this.http.post<Argonaute>(environment.apiUrl + 'argonautes/', formData);
   }
 
   public updateArgonaute(formData: FormGroup, id: number): Observable<Argonaute> {
-    return this.http.put<Argonaute>(environment.apiUrl + 'royaume/' + id, formData);
+    return this.http.put<Argonaute>(environment.apiUrl + 'argonautes/' + id, formData);
   }
 }

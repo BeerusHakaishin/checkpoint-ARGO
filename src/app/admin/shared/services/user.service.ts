@@ -18,4 +18,12 @@ export class UserService {
   public getUserById(): Observable<User[]> {
     return this.http.get<User[]>(environment.apiUrl + 'users/{id}');
   }
+
+  public deleteUser(id: number): Observable<any> {
+    return this.http.delete<any>(environment.apiUrl + 'users/' + id);
+  }
+
+  public postUser(user: User): Observable<User> {
+    return this.http.post<User>(environment.apiUrl + 'auth/signup', user);
+  }
 }

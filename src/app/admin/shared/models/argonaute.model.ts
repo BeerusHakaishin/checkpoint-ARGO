@@ -1,23 +1,18 @@
-import {Role} from './role.model';
-
 export class Argonaute {
   private _description: string;
   private _name: string;
   private _id: number;
   private _dob: Date;
-  private _image: string;
   
   constructor(
     description: string,
     name: string,
     id: number,
     dob: Date,
-    image: string,
   ) {
     this._description = description;
     this._id = id;
     this._dob = dob;
-    this._image = image;
     this._name = name;
   }
 
@@ -51,22 +46,6 @@ export class Argonaute {
    */
   public set id(value: number) {
     this._id = value;
-  }
-
-  /**
-   * Getter image
-   * @return {string}
-   */
-  public get image(): string {
-    return this._image;
-  }
-
-  /**
-   * Setter image
-   * @param {string} value
-   */
-  public set image(value: string) {
-    this._image = value;
   }
 
   /**

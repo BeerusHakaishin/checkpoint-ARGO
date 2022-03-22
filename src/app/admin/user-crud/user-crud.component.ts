@@ -44,5 +44,15 @@ export class UserCrudComponent implements OnInit {
       }
     });
   }
+  
+  deleteUser(id: number) {
+    if (confirm('Confirmez vous la suppression de cet administrateur ?')) {
+      this.userService.deleteUser(id).subscribe({
+        next: () => {
+          this.getUsers();
+        } 
+      });
+    } 
+  }
 
 }

@@ -20,21 +20,21 @@
             </thead>
             <!-- CONTENU -->
             <tbody>
-              <tr>
-                <td class="col-1 ion-text-center ion-text-wrap">{{ "valeur.id" }}</td>
+              <tr *ngFor="let argonaute of argonautes">
+                <td class="col-1 ion-text-center ion-text-wrap">{{ argonaute.id }}</td>
                 <td class="col-3 col-md-2 ion-text-center ion-text-wrap">
                   <ion-text class="ion-text-center ion-text-wrap">
-                      {{ "valeur.nom" }}
+                      {{ argonaute.name }}
                     </ion-text>
                 </td>
                 <td class="col-3 col-md-2 ion-text-center ion-text-wrap">
                     <ion-text class="ion-text-center ion-text-wrap">
-                        {{ "valeur.dob" }}
+                      {{ argonaute.dob }}
                       </ion-text>
                   </td>
                 <td class="col-2 ion-text-center ion-text-wrap">
                     <ion-text class="ion-text-center ion-text-wrap">
-                      {{ "valeur.description" }}
+                      {{ argonaute.description }}
                     </ion-text>
                 </td>
                 <td class="col-5 col-md-2 ion-text-center ion-text-wrap">
