@@ -32,7 +32,6 @@ export class RoyaumeCrudComponent implements OnInit {
     this.royaumeService.getArgonautes().subscribe({
       next: (argonautes) => {
         this.argonautes = argonautes;
-        console.log(this.argonautes)
       },
     });
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
+import { RoyaumeService } from 'src/app/shared/services/royaume.service';
 import { environment } from 'src/environments/environment';
 import { Argonaute } from '../../shared/models/argonaute.model';
 
@@ -18,7 +19,7 @@ export class RoyaumeFormComponent implements OnInit {
     dob: ['', [Validators.required]],
   });
 
-  constructor(private modalCtrl: ModalController,private fb: FormBuilder) {
+  constructor(private modalCtrl: ModalController,private fb: FormBuilder,private royaumeService: RoyaumeService) {
    }
 
   ngOnInit(): void {
@@ -29,6 +30,13 @@ export class RoyaumeFormComponent implements OnInit {
   }
 
   submitForm() {
-    console.log(this.equipageForm.value);
-  }
+    this.royaumeService
+    .postArgonaute(this.equipageForm.value)
+    .subscribe({
+      next: (argonaute) => {
+        this.argonaute = argonaute;
+      },
+    });
 }
+  }
+

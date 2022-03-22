@@ -11,6 +11,7 @@
 	</ion-buttons>
 	</ion-toolbar>
 	<div class="ion-padding ion-text-center ion-text-wrap">
+
 		<form (ngSubmit)="adminForm.valid && submitForm()"
 		[formGroup]="adminForm"
 		#userForm="ngForm">
@@ -30,5 +31,6 @@
 				<ion-button (click)="submitForm()" type="submit" color="primary" expand="block">Créer</ion-button>
 			  </ion-col>
 		</form>
+
 	</div>
 </ion-header>

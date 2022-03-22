@@ -13,7 +13,7 @@ export class UserFormComponent implements OnInit {
   user: User | any;
   roles: string[];
   userRole: string;
-  username: any;
+  name: any;
   role: any;
   
   adminForm = this.fb.group({
@@ -24,8 +24,9 @@ export class UserFormComponent implements OnInit {
   customAlertOptions: any = {
     translucent: true
   };
+  router: any;
   
-  constructor(private modalCtrl: ModalController , private fb: FormBuilder, private userService: UserService,) {
+  constructor(private modalCtrl: ModalController , private fb: FormBuilder, private userService: UserService) {
     this.roles = [];
     this.userRole = '';
    }
@@ -45,8 +46,12 @@ export class UserFormComponent implements OnInit {
   }
 
   submitForm() {
-
+    this.userService
+      .postUser(this.adminForm.value)
+      .subscribe({
+        next: (user) => {
+          this.user = user;
+        },
+      });
   }
-
-  
 }
