@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Argonaute } from 'src/app/admin/shared/models/argonaute.model';
 import { environment } from 'src/environments/environment';
@@ -23,11 +24,11 @@ export class RoyaumeService {
     return this.http.delete<any>(environment.apiUrl + 'royaume/' + id);
   }
 
-  public postArgonaute(data: any): Observable<Argonaute> {
-    return this.http.post<Argonaute>(environment.apiUrl + 'royaume/', data);
+  public postArgonaute(formData: FormGroup): Observable<Argonaute> {
+    return this.http.post<Argonaute>(environment.apiUrl + 'royaume/', formData);
   }
 
-  public updateArgonaute(data: any, id: number): Observable<Argonaute> {
-    return this.http.put<Argonaute>(environment.apiUrl + 'royaume/' + id, data);
+  public updateArgonaute(formData: FormGroup, id: number): Observable<Argonaute> {
+    return this.http.put<Argonaute>(environment.apiUrl + 'royaume/' + id, formData);
   }
 }

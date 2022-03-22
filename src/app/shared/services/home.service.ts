@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from 'src/environments/environment';
 import {Background} from 'src/app/admin/shared/models/background.model';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,11 @@ export class HomeService {
     return this.http.get<Background[]>(environment.apiUrl + 'background');
   }
 
-  public updateBackground(id: number, data: any) {
-    return this.http.put<Background>(environment.apiUrl + 'background/' + id, data);
+  public updateBackground(id: number, formData: FormGroup) {
+    return this.http.put<Background>(environment.apiUrl + 'background/' + id, formData);
   }
 
-  public createBackground<Background>(data: any) {
-    return this.http.post<Background>(environment.apiUrl + 'background', data);
+  public createBackground<Background>(formData: FormGroup) {
+    return this.http.post<Background>(environment.apiUrl + 'background', formData);
   }
 }
